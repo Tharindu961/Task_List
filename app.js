@@ -8,9 +8,11 @@ const taskInput = document.querySelector('#task');
 // Load all event listeners
 loadEventListeners();
  //Load all event Listeners
- function loadEvenetListerners() {
+ function loadEventListeners() {
      //Add all tasks
      form.addEventListener('submit', addTask);
+     // remove task event
+     taskList.addEventListener('click', removeTask);
  }
 
  //add Task
@@ -43,4 +45,9 @@ loadEventListeners();
     console.log(li);
 
       e.preventDefault();
+  }
+
+  // remove task
+  function removeTask(e) {
+      console.log(e.target);
   }
